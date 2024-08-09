@@ -57,3 +57,4 @@ const tasksSlice = createSlice({
 });
 
 export const tasksReducer = tasksSlice.reducer;
+export default tasksSlice.reducer;

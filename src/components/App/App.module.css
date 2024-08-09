@@ -1,19 +1,24 @@
-/* App.module.css */
-.container {
-  max-width: 600px;
-  margin: 0 auto;
-  /* Центрує контейнер по горизонталі */
-  padding: 20px;
-  text-align: center;
-  /* Центрує текст всередині контейнера */
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding: 10px;
+  background-color: #f8f9fa;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
 }
 
-.title {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: #333;
+nav ul li {
+  margin: 0 15px;
 }
 
-.error {
-  color: red;
+nav ul li a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: #0056b3;
 }

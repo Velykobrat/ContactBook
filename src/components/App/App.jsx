@@ -1,30 +1,31 @@
-import React, { useEffect } from 'react';
-import ContactForm from '../ContactForm/ContactForm';
-import ContactList from '../Contactlist/ContactList';
-import SearchBox from '../SearchBox/SearchBox';
-import { useDispatch, useSelector } from 'react-redux';
-import { fetchContacts } from '../../redux/contactsOps';
-import styles from './App.module.css';
-
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import ContactsPage from '../ContactsPage/ContactsPage';
+import PlannerPage from '../PlannerPage/PlannerPage';
+import './App.module.css';
 
 const App = () => {
-  const dispatch = useDispatch();
-  const loading = useSelector((state) => state.contacts.loading);
-  const error = useSelector((state) => state.contacts.error);
-
-  useEffect(() => {
-    dispatch(fetchContacts());
-  }, [dispatch]);
-
   return (
-    <div className={styles.container}>
-      <h1 className={styles.title}>Contact Book</h1>
-      {loading && <p>Loading...</p>}
-      {error && <p className={styles.error}>Error: {error}</p>}
-      <ContactForm />
-      <SearchBox />
-      <ContactList />
-    </div>
+    <Router>
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/contacts">Contacts</Link>
+            </li>
+            <li>
+              <Link to="/planner">Planner</Link>
+            </li>
+          </ul>
+        </nav>
+
+        <Routes>
+          <Route path="/contacts" element={<ContactsPage />} />
+          <Route path="/planner" element={<PlannerPage />} />
+          <Route path="/" element={<ContactsPage />} /> {/* Redirect to contacts by default */}
+        </Routes>
+      </div>
+    </Router>
   );
 };
 
