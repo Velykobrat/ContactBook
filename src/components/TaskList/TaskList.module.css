@@ -1,9 +1,33 @@
+/* TaskList.module.css */
 .list {
     margin: 0;
     padding: 0;
     list-style: none;
+    background-color: #f8f9fa;
+    /* Легкий фон для списку */
+    border-radius: 5px;
+    /* Закруглені кути для списку */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Тінь для списку */
 }
 
-.listItem+.listItem {
-    border-top: 1px solid #2f2f37;
+.listItem {
+    padding: 12px 16px;
+    /* Внутрішні відступи для елементів списку */
+    border-bottom: 1px solid #ddd;
+    /* Легка рамка між елементами списку */
+    background-color: #fff;
+    /* Білий фон для елементів списку */
+    transition: background-color 0.3s ease;
+    /* Плавний перехід кольору фону */
+}
+
+.listItem:hover {
+    background-color: #f1f1f1;
+    /* Легке затемнення фону при наведенні */
+}
+
+.listItem:last-child {
+    border-bottom: none;
+    /* Прибрати рамку у останнього елемента */
 }

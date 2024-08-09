@@ -1,14 +1,73 @@
+/* TaskForm.module.css */
 .form {
     display: flex;
-    gap: 4px;
+    gap: 8px;
+    /* Збільшено відступ між елементами */
+    align-items: center;
+    /* Вертикальне вирівнювання для кнопки і поля вводу */
+    padding: 10px;
+    /* Додані відступи всередині форми */
+    border: 1px solid #ddd;
+    /* Легка рамка для форми */
+    border-radius: 5px;
+    /* Закруглені кути */
+    background-color: #fff;
+    /* Білий фон для форми */
 }
 
 .field {
     flex-grow: 1;
-    padding: 8px;
-    font: inherit;
+    /* Розтягується, щоб зайняти вільний простір */
+    padding: 10px;
+    /* Внутрішні відступи для поля вводу */
+    font-size: 16px;
+    /* Збільшений розмір шрифту */
+    border: 1px solid #ccc;
+    /* Легка рамка для поля вводу */
+    border-radius: 5px;
+    /* Закруглені кути */
+    box-sizing: border-box;
+    /* Включає padding і border в загальну ширину */
+    background-color: #f8f9fa;
+    /* Легкий фон для поля вводу */
+    color: #333;
+    /* Колір тексту */
 }
 
 .field:focus {
-    outline-color: #1976d2;
+    outline: none;
+    /* Прибрати стандартний outline */
+    border-color: #1976d2;
+    /* Зміна кольору рамки при фокусі */
+    box-shadow: 0 0 0 2px rgba(25, 118, 210, 0.2);
+    /* Тінь для фокусу */
+}
+
+button {
+    padding: 10px 20px;
+    /* Внутрішні відступи кнопки */
+    font-size: 16px;
+    /* Розмір шрифту кнопки */
+    background-color: #1976d2;
+    /* Основний колір кнопки */
+    color: white;
+    /* Колір тексту кнопки */
+    border: none;
+    /* Прибрати стандартний бордер */
+    border-radius: 5px;
+    /* Закруглені кути */
+    cursor: pointer;
+    /* Зміна курсору при наведенні */
+    transition: background-color 0.3s ease;
+    /* Плавний перехід кольору фону */
+}
+
+button:hover {
+    background-color: #155a8a;
+    /* Темніший колір кнопки при наведенні */
+}
+
+button:focus {
+    outline: 2px solid #1976d2;
+    /* Контур при фокусі */
 }

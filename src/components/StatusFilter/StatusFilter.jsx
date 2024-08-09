@@ -14,19 +14,19 @@ export const StatusFilter = () => {
   return (
     <div className={css.wrapper}>
       <Button
-        selected={filter === statusFilters.all}
+        className={`${css.button} ${filter === statusFilters.all ? css.selected : ''}`}
         onClick={() => handleFilterChange(statusFilters.all)}
       >
         All
       </Button>
       <Button
-        selected={filter === statusFilters.active}
+        className={`${css.button} ${filter === statusFilters.active ? css.selected : ''}`}
         onClick={() => handleFilterChange(statusFilters.active)}
       >
         Active
       </Button>
       <Button
-        selected={filter === statusFilters.completed}
+        className={`${css.button} ${filter === statusFilters.completed ? css.selected : ''}`}
         onClick={() => handleFilterChange(statusFilters.completed)}
       >
         Completed

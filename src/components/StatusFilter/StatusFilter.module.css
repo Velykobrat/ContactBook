@@ -1,4 +1,42 @@
 .wrapper {
     display: flex;
-    gap: 4px;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.button {
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    color: #fff;
+    background-color: #007bff;
+    /* Основний колір фону */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+.button.selected {
+    background-color: #28a745;
+    /* Колір вибраної кнопки */
+}
+
+.button.active {
+    background-color: #ffc107;
+    /* Колір для активних кнопок */
+}
+
+.button.completed {
+    background-color: #dc3545;
+    /* Колір для завершених кнопок */
+}
+
+.button:not(.selected):hover {
+    background-color: #0056b3;
+    color: #fff;
 }

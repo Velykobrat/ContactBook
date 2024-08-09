@@ -1,3 +1,10 @@
+/* App.module.css */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 nav ul {
   display: flex;
   justify-content: center;
@@ -21,4 +28,14 @@ nav ul li a {
 
 nav ul li a:hover {
   color: #0056b3;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  padding-bottom: 50px;
+  /* для врахування висоти фіксованого меню */
 }

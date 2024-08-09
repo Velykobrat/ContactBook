@@ -1,3 +1,25 @@
+/* TaskCounter.module.css */
+.counterContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    background-color: #fff;
+    /* Білий фон для контенту */
+    border-radius: 5px;
+    /* Закруглені кути для контейнера */
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    /* Легка тінь для контейнера */
+}
+
 .text {
-    margin: 0;
+    margin: 5px 0;
+    /* Відступи між рядками */
+    font-size: 16px;
+    /* Розмір шрифту */
+    color: #333;
+    /* Колір тексту */
+    font-weight: 300
+    ;
+    /* Жирний текст */
 }

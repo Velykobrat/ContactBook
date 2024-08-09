@@ -1,3 +1,4 @@
+// ContactsPage.jsx
 import React, { useEffect } from 'react';
 import ContactForm from '../ContactForm/ContactForm';
 import ContactList from '../Contactlist/ContactList';
@@ -6,7 +7,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchContacts } from '../../redux/contactsOps';
 import styles from './ContactsPage.module.css';
 
-const ContactsPage = () => { 
+const ContactsPage = () => {
   const dispatch = useDispatch();
   const loading = useSelector((state) => state.contacts.loading);
   const error = useSelector((state) => state.contacts.error);
@@ -27,4 +28,4 @@ const ContactsPage = () => {
   );
 };
 
-export default ContactsPage; 
+export default ContactsPage;

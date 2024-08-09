@@ -1,14 +1,51 @@
+/* AppBar.module.css */
 .wrapper {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    /* Вертикальне вирівнювання елементів */
+    padding: 10px 20px;
+    /* Відступи з усіх боків */
+    background-color: #f8f9fa;
+    /* Світлий фон для AppBar */
+    border-bottom: 1px solid #ddd;
+    /* Легка нижня рамка */
 }
 
 .section {
-    display: grid;
-    gap: 4px;
+    display: flex;
+    /* Зміна на flex для кращого вирівнювання */
+    flex-direction: column;
+    gap: 10px;
+    /* Збільшений відступ між елементами */
 }
 
 .title {
     margin: 0;
-    font-size: 16px;
+    font-size: 18px;
+    /* Збільшений розмір шрифту */
+    color: #333;
+    /* Темніший колір тексту для контрасту */
+    font-weight: 600;
+    /* Жирний текст */
+}
+
+/* Мобільні пристрої */
+@media (max-width: 600px) {
+    .wrapper {
+        flex-direction: column;
+        /* Вертикальне вирівнювання на мобільних */
+        align-items: flex-start;
+        /* Вирівнювання по лівому краю */
+    }
+
+    .section {
+        gap: 8px;
+        /* Зменшення відступу на мобільних пристроях */
+    }
+
+    .title {
+        font-size: 16px;
+        /* Менший розмір шрифту на мобільних */
+    }
 }

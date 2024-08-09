@@ -1,3 +1,4 @@
+// App.jsx
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import ContactsPage from '../ContactsPage/ContactsPage';
@@ -7,7 +8,7 @@ import './App.module.css';
 const App = () => {
   return (
     <Router>
-      <div>
+      <div className="app-container">
         <nav>
           <ul>
             <li>
@@ -19,11 +20,13 @@ const App = () => {
           </ul>
         </nav>
 
-        <Routes>
-          <Route path="/contacts" element={<ContactsPage />} />
-          <Route path="/planner" element={<PlannerPage />} />
-          <Route path="/" element={<ContactsPage />} /> {/* Redirect to contacts by default */}
-        </Routes>
+        <div className="content">
+          <Routes>
+            <Route path="/contacts" element={<ContactsPage />} />
+            <Route path="/planner" element={<PlannerPage />} />
+            <Route path="/" element={<ContactsPage />} /> {/* Redirect to contacts by default */}
+          </Routes>
+        </div>
       </div>
     </Router>
   );
