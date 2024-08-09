@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { deleteContact } from '../../redux/contactsSlice';
 import styles from './Contact.module.css';
 
-function Contact({ id, name, number }) {
+function Contact({ id, name, emale, number }) {
   const dispatch = useDispatch();
 
   const handleDelete = () => {
@@ -13,6 +13,7 @@ function Contact({ id, name, number }) {
   return (
     <li className={styles.listItem}>
       <span className={styles.name}>{name}</span>
+      <span className={styles.emale}>{emale}</span>
       <span className={styles.number}>{number}</span>
       <button onClick={handleDelete} className={styles.button}>Delete</button>
     </li>

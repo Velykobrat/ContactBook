@@ -15,6 +15,7 @@ const ContactList = () => {
         <li key={contact.id} className={styles.contactItem}>
           <div className={styles.contactDetails}>
             <span className={styles.contactName}>{contact.name}</span>
+            <span className={styles.contactEmale}>{contact.emale}</span>
             <span className={styles.contactNumber}>{contact.number}</span>
           </div>
           <button onClick={() => dispatch(deleteContact(contact.id))}>Delete</button>
