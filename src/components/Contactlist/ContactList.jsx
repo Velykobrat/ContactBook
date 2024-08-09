@@ -2,7 +2,8 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { deleteContact } from '../../redux/contactsOps';
-import { selectFilteredContacts } from '../../redux/contactsSlice'; 
+import { selectFilteredContacts } from '../../redux/contactsSlice';
+import { FaTrashAlt } from 'react-icons/fa';
 import styles from './ContactList.module.css';
 
 const ContactList = () => {
@@ -10,18 +11,28 @@ const ContactList = () => {
   const dispatch = useDispatch();
 
   return (
-    <ul className={styles.contactList}>
+    <div className={styles.contactGrid}>
       {filteredContacts.map((contact) => (
-        <li key={contact.id} className={styles.contactItem}>
+        <div key={contact.id} className={styles.contactItem}>
+          <img 
+            src={contact.avatarUrl || 'default-avatar.png'} 
+            alt={`${contact.name}'s avatar`} 
+            className={styles.contactAvatar} 
+          />
           <div className={styles.contactDetails}>
             <span className={styles.contactName}>{contact.name}</span>
             <span className={styles.contactEmale}>{contact.emale}</span>
             <span className={styles.contactNumber}>{contact.number}</span>
           </div>
-          <button onClick={() => dispatch(deleteContact(contact.id))}>Delete</button>
-        </li>
+          <button 
+            className={styles.deleteButton}
+            onClick={() => dispatch(deleteContact(contact.id))}
+          >
+            <FaTrashAlt />
+          </button>
+        </div>
       ))}
-    </ul>
+    </div>
   );
 };
 

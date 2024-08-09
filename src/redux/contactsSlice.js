@@ -52,11 +52,10 @@ const contactsSlice = createSlice({
   },
 });
 
-// Вибірка контактів і фільтра
-const selectContacts = (state) => state.contacts.items;
-const selectFilter = (state) => state.filters.nameFilter;
 
-// Мемоізований селектор для відфільтрованих контактів
+const selectContacts = (state) => state.contacts.items;
+const selectFilter = (state) => state.filters.name;
+
 export const selectFilteredContacts = createSelector(
   [selectContacts, selectFilter],
   (contacts, filter) => {
