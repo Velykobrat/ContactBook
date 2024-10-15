@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.7",
+    "aws-sdk": "^2.1691.0",
     "axios": "^1.7.3",
     "clsx": "^2.1.1",
     "formik": "^2.4.6",
@@ -23,6 +24,8 @@
     "redux": "^5.0.1",
     "redux-persist": "^6.0.0",
     "reselect": "^5.1.1",
+    "speed-test": "^3.0.0",
+    "speedtest-net": "^2.2.0",
     "yup": "^1.4.0"
   },
   "devDependencies": {

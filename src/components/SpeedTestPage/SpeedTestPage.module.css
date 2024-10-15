@@ -1,0 +1,11 @@
+/* SpeedTestPage.module.css */
+
+.speedTestContainer {
+  text-align: center;
+  margin: 20px;
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
+}

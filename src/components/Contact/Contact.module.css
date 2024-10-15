@@ -1,36 +1,104 @@
-.listItem {
+.contactItem {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    padding: 10px;
+    padding: 20px;
     border: 1px solid #ddd;
-    margin-bottom: 10px;
-    border-radius: 5px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.name {
-    font-size: 1rem;
+.contactItem:hover {
+    background-color: #e2e2e2;
+    transform: scale(1.03);
+}
+
+.contactAvatar {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.contactDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.contactName {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.2em;
+    margin-bottom: 8px;
     color: #333;
-    flex-grow: 1;
-    text-align: left;
 }
 
-.number {
-    font-size: 1rem;
-    color: #777;
-    text-align: right;
-    margin-right: 25px;
+.contactEmail,
+.contactNumber {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 5px;
 }
 
-.button {
-    padding: 5px 10px;
-    font-size: 0.8rem;
-    background-color: #f44336;
+.deleteButton {
+    background-color: #ff4d4d;
     color: white;
     border: none;
+    padding: 10px 20px;
     cursor: pointer;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
 }
 
-.button:hover {
-    background-color: #e53935;
+.deleteButton:hover {
+    background-color: #cc0000;
+}
+
+/* Адаптивні стилі */
+@media (max-width: 768px) {
+    .contactItem {
+        padding: 15px;
+    }
+
+    .contactAvatar {
+        width: 70px;
+        height: 70px;
+    }
+
+    .contactName {
+        font-size: 1.1em;
+    }
+
+    .deleteButton {
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contactItem {
+        padding: 10px;
+    }
+
+    .contactAvatar {
+        width: 60px;
+        height: 60px;
+    }
+
+    .contactName {
+        font-size: 1em;
+    }
+
+    .deleteButton {
+        padding: 6px 12px;
+        font-size: 0.9em;
+    }
 }

@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes, NavLink } from 'react-router-do
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import ContactsPage from '../ContactsPage/ContactsPage';
 import PlannerPage from '../PlannerPage/PlannerPage';
+import SpeedTestPage from '../SpeedTestPage/SpeedTestPage';
 import './App.module.css';
 
 const App = () => {
@@ -27,6 +28,14 @@ const App = () => {
                 Planner
               </NavLink>
             </li>
+            <li>
+              <NavLink 
+                to="/speedtest" 
+                className={({ isActive }) => (isActive ? 'active' : '')}
+              >
+                Speed Test
+              </NavLink>
+            </li>
           </ul>
         </nav>
 
@@ -40,6 +49,7 @@ const App = () => {
               <Routes>
                 <Route path="/contacts" element={<ContactsPage />} />
                 <Route path="/planner" element={<PlannerPage />} />
+                <Route path="/speedtest" element={<SpeedTestPage />} />
                 <Route path="/" element={<ContactsPage />} /> 
               </Routes>
             </CSSTransition>
